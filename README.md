@@ -23,6 +23,6 @@ One `server` process must be running on the target Linux machine. An account is 
     ```sh
     make
     ```
-1. copy both the `bin/dungeon-server` and `bin/dungeon-client` executables to the "dungeon" account
-2. set up a service to make sure the `bin/dungeon-server` is always running (e.g. `sudo systemctl restart dungeon-server`)
+1. if your long-running server service and dungeon account config are expecting the executables to be in certain places, copy both the `bin/dungeon-server` and `bin/dungeon-client` executables to those places (such as the "dungeon" account's root directory)
+2. set up a long-running service to make sure the `bin/dungeon-server` is always running (e.g. `sudo systemctl restart dungeon-server`)
 3. clients should now be able to log into the server via SSH
